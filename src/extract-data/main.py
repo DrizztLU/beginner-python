@@ -46,5 +46,4 @@ print ("CSV parse elapsed time: "+ str(theTimers["csv"]) + "s")
 
 # print ("XML parse elapsed time: "+ str(theTimers["xml"]) + "s")
 
-# Data should be easily comparable
 
