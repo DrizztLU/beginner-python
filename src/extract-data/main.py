@@ -35,15 +35,13 @@ print ("CSV parse elapsed time: "+ str(theTimers["csv"]) + "s")
 
 # XML doesn't have a neat parser, so I'll have to do it manually (coming later!)
 
-# theXMLTimerStart = perf_counter()
+theXMLTimerStart = perf_counter()
 
-# theXMLParser = XMLParser()
-# theXMLData = theXMLParser.ParseFiles()
+theXMLParser = XMLParser()
+theXMLData = theXMLParser.ParseFiles()
 
-# theXMLTimerStop = perf_counter()
+theXMLTimerStop = perf_counter()
 
-# theTimers["xml"] = theXMLTimerStop - theXMLTimerStart
+theTimers["xml"] = theXMLTimerStop - theXMLTimerStart
 
-# print ("XML parse elapsed time: "+ str(theTimers["xml"]) + "s")
-
-
+print ("XML parse elapsed time: "+ str(theTimers["xml"]) + "s")
