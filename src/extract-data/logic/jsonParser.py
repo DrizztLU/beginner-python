@@ -11,16 +11,14 @@ class JsonParser(AbstractParser):
         super().__init__()
 
     def ParseFiles(self):
-        theResult = {}
-        i = 0
+        theResult = []
 
         for theFilePath in self.Files:
-            theData = None
 
-            with open(theFilePath) as theFile:
-                theData = json.load(theFile)
+            with open(theFilePath, encoding='utf-8-sig') as theFile:
+                theFileContent = theFile.read()
+                theData = json.loads(theFileContent)
+                theResult.append(theData)
                 
-            theResult[i] = theData
-            i += 1
 
         return theResult
